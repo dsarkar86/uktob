@@ -1,0 +1,142 @@
+.index-header{
+    background-color: #000000;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.index-header a{
+    text-decoration: none !important;
+}
+
+.index-header ul li a:hover{
+    color: #fff;
+}
+
+/* .index-header a */
+
+.nav-main, .nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+.nav-main{
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 60px;
+}
+
+.nav-middle{
+    display: flex;
+}
+
+.index-header ul{
+    margin-top: 15px;
+    list-style: none;
+}
+.index-header ul li a{
+    color: #fff;
+}
+
+@media screen and (max-width: 990px) {
+    .nav-middle{
+        position: absolute;
+        top: 65px;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.6s;
+        background-color: #000000;
+    } 
+
+    .nav-middle.active{
+        height: 220px;
+        padding: 20px 50px;
+        transition: 0.6s;
+        border-top: 1px solid #fff4;
+    }
+
+    .hamburger{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .line{
+        margin-top: 7px;
+        width: 37px;
+        height: 3px;
+        background-color: #fff;
+        transition: 0.6s;
+    }
+    
+    .line:first-child{
+        margin-top: 0; 
+    }
+    
+    .hamburger.active .line:first-child,.hamburger.active .line:last-child{
+        border-radius: 10px;
+        width: 30px;
+    }
+    
+    .hamburger.active .line:first-child{
+        transform: rotatez(45deg);
+    }
+    
+    .hamburger.active .line:last-child{
+        margin-top: -13px; 
+        transform: rotatez(-45deg);
+    }
+    
+    .hamburger.active .line:nth-child(2){
+        opacity: 0;
+        transition: 0.4s;
+    }
+      
+}
+
+@media screen and (max-width: 768px) {
+    .nav-main{
+        padding: 20px 15px;
+    } 
+    .nav-middle.active{
+        padding: 20px 15px;
+    }
+    .nav-btn{
+        padding: 10px !important;
+        font-size: 14px;
+    }
+      
+}
+
+.bg-red{
+    background-color: red;
+}
+
+/* leftnavbar  */
+#sidebar{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    z-index: 999;
+    /* overflow: hidden; */
+}
+
+.left-header{
+    background-color: red;
+}
+
+.ptt-0{
+    padding-top: 0;
+}
